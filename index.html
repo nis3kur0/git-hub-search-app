@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Github user search app" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" />
+    <title>Github user search app</title>
+  </head>
+
+  <body>
+ 
+    <div class="container">
+      <header>
+        <p class="header-logo">devfinder</p> 
+        <button class="header-theme-switch-btn body-s" onclick="switchTheme()"> 
+          <span id="theme-switch-text">Dark</span>
+        </button>
+      </header>
+      <main>
+        <form class="search-container" onsubmit="submitForm(event)">
+          <img src="./assets/icon-search.svg" class="search-icon" alt="Search icon" />
+          <input
+            type="text" class="search-input"  placeholder="Username..."  name="GitHub Username" id="github-username"/>
+          <button class="btn-search" type="submit">Search</button>
+        </form>
+        <section class="user-section">
+          <img src="./assets/image-user-placeholder.png" class="user-img" id="user-img" alt="profile pic" />
+          <div class="user-main">
+            <div class="user-top">
+              <img
+                src="./assets/image-user-placeholder.png"
+                class="user-img"
+                id="user-img-mobile"
+                alt="User profile image"
+              />
+              <h1 class="user-name" id="user-name">Name</h1>
+              <time class="body user-joined" id="user-joined-time">Joined ...</time>
+              <h3 class="user-username" id="user-username">@Username</h3>
+            </div>
+            <p class="body user-bio" id="user-bio">User bio...</p>
+            <ul class="user-stats">
+              <li>
+                <h4 class="user-stat-title">Repos</h4>
+                <h2 class="user-stat-value" id="user-repos">...</h2>
+              </li>
+              <li>
+                <h4 class="user-stat-title">Followers</h4>
+                <h2 class="user-stat-value" id="user-followers">...</h2>
+              </li>
+              <li>
+                <h4 class="user-stat-title">Following</h4>
+                <h2 class="user-stat-value" id="user-following">...</h2>
+              </li>
+            </ul>
+            <section class="user-links">
+              <div class="user-link-container" id="user-location">
+                <span class="body user-link">Location...</span>
+              </div>
+              <div class="user-link-container" id="user-twitter">
+                <a href="" class="body user-link" target="_blank" rel="noreferrer">Twitter...</a>
+              </div>
+              <div class="user-link-container" id="user-website">
+                <a href="" class="body user-link" target="_blank" rel="noreferrer">Website...</a>
+              </div>
+              <div class="user-link-container" id="user-organization">
+                <a href="" class="body user-link" target="_blank" rel="noreferrer">Organization...</a>
+              </div>
+
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./main.js"></script>
+   
+  </body>
+</html>
